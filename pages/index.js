@@ -91,11 +91,11 @@ const Home = () => {
 
 	return (
 		<div className={'frame'}>
-			<Head>
-				<title>Create Next App</title>
-				<link rel="icon" href="/favicon.ico" />
+			{/* <Head> */}
+				{/* <title>Create Next App</title>
+				<link rel="icon" href="/favicon.ico" /> */}
 				{/* <script async defer data-domain="tugasaccrus.com" src="https://plausible.io/js/plausible.js"></script> */}
-			</Head>
+			{/* </Head> */}
 			<div className={'box'}>
 				<nav>
 					<Link href={'/'}>
