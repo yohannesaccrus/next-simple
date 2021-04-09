@@ -27,7 +27,7 @@ const Home = () => {
 	// 			longitude: position.coords.longitude
 	// 		})
 	// 	})
-		
+
 	// 	const API_KEY = 'AIzaSyC-SvBhs_p2gYkMe7Tfdj3WkgrpSTfFW8c'
 	// 	let url       = `https://maps.googleapis.com/maps/api/geocode/json?latlng=-7.918159,112.64771069999999&key=${API_KEY}`
 	// 	fetch(url)
@@ -52,7 +52,7 @@ const Home = () => {
 	// 			longitude: position.coords.longitude
 	// 		})
 	// 	})
-	
+
 	// 	Geocode.fromLatLng("48.8583701", "2.2922926").then(
 	// 		(response) => {
 	// 		  const address = response.results[0].formatted_address;
@@ -72,29 +72,45 @@ const Home = () => {
 		state: '',
 		city: ''
 	})
+
+	const track = () => {
+		alert('track work')
+		var owa_baseUrl = 'https://next-owa-track.herokuapp.com/'
+		var owa_cmds = owa_cmds || []
+		owa_cmds.push(['setSiteId', 'e166b5571c46006ec88eced33981d80d'])
+		owa_cmds.push(['trackPageView'])
+		owa_cmds.push(['trackClicks']);
+
+		var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true
+		owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl)
+		_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js'
+		var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s)
+	}
+
 	useEffect(() => {
-		const API_KEY = 'f746f3f0-9393-11eb-bbed-1d442d4cd8d7'
-		let URL       = `https://geolocation-db.com/json/${API_KEY}`
-		
-		axios({
-			method: 'get',
-			url: URL
-		}).then(response => {
-			console.log(response)
-			setLocation({
-				country: response.data.country_name,
-				state: response.data.state,
-				city: response.data.city,
-			})
-		})
+		// const API_KEY = 'f746f3f0-9393-11eb-bbed-1d442d4cd8d7'
+		// let URL = `https://geolocation-db.com/json/${API_KEY}`
+
+		// axios({
+		// 	method: 'get',
+		// 	url: URL
+		// }).then(response => {
+		// 	console.log(response)
+		// 	setLocation({
+		// 		country: response.data.country_name,
+		// 		state: response.data.state,
+		// 		city: response.data.city,
+		// 	})
+		// })
+		track()
 	}, [])
 
 	return (
 		<div className={'frame'}>
 			{/* <Head> */}
-				{/* <title>Create Next App</title>
+			{/* <title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" /> */}
-				{/* <script async defer data-domain="tugasaccrus.com" src="https://plausible.io/js/plausible.js"></script> */}
+			{/* <script async defer data-domain="tugasaccrus.com" src="https://plausible.io/js/plausible.js"></script> */}
 			{/* </Head> */}
 			<div className={'box'}>
 				<nav>
