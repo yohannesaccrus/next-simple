@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
 			<title>Next OWA Test</title>
 			<link rel="icon" href="/favicon.ico" />
-			{/* <script type="text/javascript" src="/static/owa.js"></script> */}
+			<script type="text/javascript" src="/static/globalOWA.js"></script>
 			{/* <script type="text/javascript">
 				var owa_baseUrl = 'https://next-owa-track.herokuapp.com/';
 				var owa_cmds = owa_cmds || [];
