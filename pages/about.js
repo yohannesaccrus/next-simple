@@ -52,6 +52,11 @@ const About = () => {
 	// 	track()
 	// }, [])
 
+	const submit = () => {
+		alert('Submit Clicked')
+		OWATracker.trackAction('About Page', 'Submit Clicked');
+	}
+
 	return (
 		<div className={'frame'}>
 			<div className={'box'}>
@@ -67,7 +72,7 @@ const About = () => {
 			<div className={'action'}>
 				{/* <button type={'button'} onClick={() => submitOTP()}>Submit OTPX</button>
 				<button type={'button'} onClick={() => registration()}>User Registration</button> */}
-				<button type={'button'}>Submit OTPX</button>
+				<button type={'button'} onClick={() => submit()}>Submit OTPX</button>
 				<button type={'button'}>User Registration</button>
 			</div>
 			</div>
