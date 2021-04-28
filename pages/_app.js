@@ -29,6 +29,7 @@ const MyApp = ({ Component, pageProps }) => {
 				<title>Next App</title>
 				<link rel="icon" href="/favicon.ico" />
 				<script type="text/javascript" src="/static/owa.js"/>
+				<script type="text/javascript" src="/static/try.js"/>
 			</Head>
 			<Component {...pageProps} />
 		</Fragment>
