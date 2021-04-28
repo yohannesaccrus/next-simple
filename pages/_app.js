@@ -1,28 +1,35 @@
 import React, { Fragment, useEffect } from 'react'
+import Head from 'next/head'
 import '../assets/application.scss'
 
 const MyApp = ({ Component, pageProps }) => {
 
-	// const track = () => {
-	// 	alert('track HOC work')
-	// 	var owa_baseUrl = 'https://next-owa-track.herokuapp.com/'
-	// 	var owa_cmds = owa_cmds || []
-	// 	owa_cmds.push(['setSiteId', 'e166b5571c46006ec88eced33981d80d'])
-	// 	owa_cmds.push(['trackPageView'])
-	// 	owa_cmds.push(['trackClicks']);
-
-	// 	var _owa = document.createElement('script'); _owa.type = 'text/javascript'; _owa.async = true
-	// 	owa_baseUrl = ('https:' == document.location.protocol ? window.owa_baseSecUrl || owa_baseUrl.replace(/http:/, 'https:') : owa_baseUrl)
-	// 	_owa.src = owa_baseUrl + 'modules/base/js/owa.tracker-combined-min.js'
-	// 	var _owa_s = document.getElementsByTagName('script')[0]; _owa_s.parentNode.insertBefore(_owa, _owa_s)
+	// const trackInitial = () => {
+	// 	alert('initial happens')
+	// 	var owa_baseUrl = "https://next-owa-track.herokuapp.com/"
+	// 	document.write(unescape("<script src='" + owa_baseUrl + "modules/base/js/owa.tracker-combined-min.js' type='text/javascript'> </script>"))
 	// }
 
-	// useEffect(() => {
-	// 	track()
-	// }, [])
+	// const trackDefine = () => {
+	// 	try {
+	// 		OWA.setSetting('baseUrl', owa_baseUrl)
+	// 		OWATracker = new OWA.tracker()
+	// 		OWATracker.setSiteId('e166b5571c46006ec88eced33981d80d')
+	// 		OWATracker.trackPageView()
+	// 		OWATracker.trackClicks()
+	// 		OWATracker.trackDomStream()
+
+	// 		alert('Define success')
+	// 	 } catch(err) {}
+	// }
 
 	return (
 		<Fragment>
+			<Head>
+				<title>Next App</title>
+				<link rel="icon" href="/favicon.ico" />
+				<script type="text/javascript" src="/static/owa.js"/>
+			</Head>
 			<Component {...pageProps} />
 		</Fragment>
 	)

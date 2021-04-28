@@ -117,7 +117,7 @@ const Home = () => {
 						<TileLayer url={osm.maptiler.url} attribution={osm.maptiler.attribution}/>
 					</MapContainer> */}
 				</div>
-				<h1>Index page</h1>
+				<h1>Index page for test OWA</h1>
 				{/* <h1>Your Location Detected : <span>{location.country}, {location.state}, {location.city}</span></h1> */}
 			</div>
 		</div>

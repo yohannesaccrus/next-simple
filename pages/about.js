@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import ReactGa from 'react-ga'
 import { usePlausible } from 'next-plausible'
+import Head from 'next/head'
 import Link from 'next/link'
 
 const About = () => {
@@ -54,11 +55,20 @@ const About = () => {
 
 	const submit = () => {
 		alert('Submit Clicked')
-		OWATracker.trackAction('About Page', 'Submit Clicked');
+
+		// OWA.setSetting('baseUrl', 'https://next-owa-track.herokuapp.com/');
+		// let OWATracker = new OWA.tracker()
+
+		// OWATracker.trackAction('About Page', 'Submit Clicked')
 	}
 
 	return (
 		<div className={'frame'}>
+			{/* <Head>
+				<title>About App</title>
+				<link rel="icon" href="/favicon.ico" />
+				<script type="text/javascript" src="/static/test.js"/>
+			</Head> */}
 			<div className={'box'}>
 			<nav>
 				<Link href={'/'}>
@@ -72,7 +82,7 @@ const About = () => {
 			<div className={'action'}>
 				{/* <button type={'button'} onClick={() => submitOTP()}>Submit OTPX</button>
 				<button type={'button'} onClick={() => registration()}>User Registration</button> */}
-				<button type={'button'} onClick={() => submit()}>Submit OTPX</button>
+				<button type={'button'} onClick={() => submit()} id={'dora'}>Submit OTPX</button>
 				<button type={'button'}>User Registration</button>
 			</div>
 			</div>
