@@ -28,8 +28,9 @@ const MyApp = ({ Component, pageProps }) => {
 			<Head>
 				<title>Next App</title>
 				<link rel="icon" href="/favicon.ico" />
-				<script type="text/javascript" src="/static/owa.js"/>
-				<script type="text/javascript" src="/static/try.js"/>
+				{/* <script type="text/javascript" src="/static/owa.js"/>
+				<script type="text/javascript" src="/static/try.js"/> */}
+				<script async defer data-domain="next-web-track.herokuapp.com" src="http://localhost:8000/js/plausible.js"></script>
 			</Head>
 			<Component {...pageProps} />
 		</Fragment>

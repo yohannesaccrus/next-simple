@@ -95,9 +95,6 @@ const Home = () => {
 
 	return (
 		<div className={'frame'}>
-			<Head>
-				<script async defer data-domain="next-web-track.herokuapp.com" src="http://localhost:8000/js/plausible.js"></script>
-			</Head>
 			{/* <Head> */}
 			{/* <title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" /> */}
