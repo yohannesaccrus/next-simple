@@ -95,6 +95,9 @@ const Home = () => {
 
 	return (
 		<div className={'frame'}>
+			<Head>
+				<script async defer data-domain="next-web-track.herokuapp.com" src="http://localhost:8000/js/plausible.js"></script>
+			</Head>
 			{/* <Head> */}
 			{/* <title>Create Next App</title>
 				<link rel="icon" href="/favicon.ico" /> */}
@@ -117,7 +120,7 @@ const Home = () => {
 						<TileLayer url={osm.maptiler.url} attribution={osm.maptiler.attribution}/>
 					</MapContainer> */}
 				</div>
-				<h1>Index page for test OWA</h1>
+				<h1>Index page for test Plausible</h1>
 				{/* <h1>Your Location Detected : <span>{location.country}, {location.state}, {location.city}</span></h1> */}
 			</div>
 		</div>
